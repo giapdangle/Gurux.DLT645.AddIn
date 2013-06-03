@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4989EDA-2844-45CA-AC42-E417BDDDEA86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gurux.DLT645.AddIn</RootNamespace>
+    <AssemblyName>Gurux.DLT645.AddIn</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="Execute" command="mono ../../../GXDirector/Development/bin/Debug/GXDirector.exe" />
+      </CustomCommands>
+    </CustomCommands>
+    <Commandlineparameters>/debug</Commandlineparameters>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataType.cs" />
+    <Compile Include="DeviceImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceImportForm.Designer.cs">
+      <DependentUpon>DeviceImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLT645DeviceWizardDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GXDataIDConverter.cs" />
+    <Compile Include="GXDLT645AddIn.cs" />
+    <Compile Include="GXDLT645Device.cs" />
+    <Compile Include="GXDLT645PacketHandler.cs" />
+    <Compile Include="GXDLT645PacketParser.cs" />
+    <Compile Include="GXDLT645Property.cs" />
+    <Compile Include="GXDLT645Table.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtocolParser\GXDLT645.cs" />
+    <Compile Include="ProtocolParser\Shared\GXCommon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddressDlg.resx">
+      <DependentUpon>AddressDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLT645DeviceWizardDlg.resx">
+      <DependentUpon>DLT645DeviceWizardDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeviceImportForm.resx">
+      <DependentUpon>DeviceImportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLTProperties.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GXCom\Gurux.Common\Development\Gurux.Common_2008.csproj">
+      <Project>{749652D4-4779-4869-AD81-5211A661CD1B}</Project>
+      <Name>Gurux.Common_2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GXCom\Gurux.Communication\Development\Gurux.Communication_2008.csproj">
+      <Project>{BA05698E-DDAA-4D04-A6F0-6BC571805179}</Project>
+      <Name>Gurux.Communication_2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GXCom\Gurux.Device\Development\Gurux.Device_2008.csproj">
+      <Project>{C4BB249E-A56A-4675-B406-864280D77BF3}</Project>
+      <Name>Gurux.Device_2008</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

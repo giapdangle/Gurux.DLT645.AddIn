@@ -1,0 +1,35 @@
+<DLTItems>
+  <!--Access modes 1=Read, 2=Write 3=ReadWrite. Default value is 1.-->
+  <Properties>
+    <Property ID="00010000" Name="Current active total energy" Type="UInt32" />
+    <Property ID="00010100" Name="Current active energy(T1)" Type="UInt32" />
+    <Property ID="00010200" Name="Current active energy(T2)" Type="UInt32" />
+    <Property ID="00010300" Name="Current active energy(T3)" Type="UInt32" />
+    <Property ID="00010400" Name="Current active energy(T4)" Type="UInt32" />
+    <Property ID="00010001" Name="1 month ago active total energy" Type="UInt32" />
+    <Property ID="00010101" Name="1 month ago active energy(T1)" Type="UInt32" />
+    <Property ID="00010201" Name="1 month ago active energy(T2)" Type="UInt32" />
+    <Property ID="00010301" Name="1 month ago active energy(T3)" Type="UInt32" />
+    <Property ID="00010401" Name="1 month ago active energy(T4)" Type="UInt32" />
+    <Property ID="00010002" Name="2 month ago active total energy" Type="UInt32" />
+    <Property ID="00010102" Name="2 month ago active energy(T1)" Type="UInt32" />
+    <Property ID="00010202" Name="2 month ago active energy(T2)" Type="UInt32" />
+    <Property ID="00010302" Name="2 month ago active energy(T3)" Type="UInt32" />
+    <Property ID="00010402" Name="2 month ago active energy(T4)" Type="UInt32" />
+    <Property ID="04000401" Name="Meter ID(low 8 bit)" Type="UInt48" />
+    <Property ID="04000402" Name="Meter ID(high 4 bit)" Type="UInt48" />
+    <Property ID="04000101" Name="Date" Type="Date" Access="3" />
+    <Property ID="04000102" Name="Time" Type="Time" Access="3" />
+    <Property ID="02010100" Name="Voltage" Type="UInt16" />
+    <Property ID="02020100" Name="Current" Type="UInt24" />
+    <Property ID="02030100" Name="Power" Type="UInt24" />
+    <Property ID="02800001" Name="Neutral Current" Type="UInt32" />
+    <Property ID="02060100" Name="Power Factor" Type="UInt16" />
+  </Properties>
+  <Tables>
+    <Table ID="03110000" Name="Power Breakdowns">
+      <Property Name="End Date" Type="DateTime" />
+      <Property Name="Start Date" Type="DateTime" />
+    </Table>
+  </Tables>
+</DLTItems>
