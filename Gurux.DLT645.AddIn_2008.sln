@@ -1,15 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.DLT645.AddIn", "Gurux.DLT645.AddIn\Gurux.DLT645.AddIn.csproj", "{B4989EDA-2844-45CA-AC42-E417BDDDEA86}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.DLT645.AddIn_2008", "Gurux.DLT645.AddIn\Gurux.DLT645.AddIn_2008.csproj", "{B4989EDA-2844-45CA-AC42-E417BDDDEA86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Common_2010", "..\..\GXCom\Gurux.Common\Development\Gurux.Common_2010.csproj", "{749652D4-4779-4869-AD81-5211A661CD1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Common_2008", "..\..\GXCom\Gurux.Common\Development\Gurux.Common_2008.csproj", "{749652D4-4779-4869-AD81-5211A661CD1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Communication_2010", "..\..\GXCom\Gurux.Communication\Development\Gurux.Communication_2010.csproj", "{BA05698E-DDAA-4D04-A6F0-6BC571805179}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Communication_2008", "..\..\GXCom\Gurux.Communication\Development\Gurux.Communication_2008.csproj", "{BA05698E-DDAA-4D04-A6F0-6BC571805179}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Device_2010", "..\..\GXCom\Gurux.Device\Development\Gurux.Device_2010.csproj", "{C4BB249E-A56A-4675-B406-864280D77BF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Device_2008", "..\..\GXCom\Gurux.Device\Development\Gurux.Device_2008.csproj", "{C4BB249E-A56A-4675-B406-864280D77BF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Serial_2010", "..\..\GXCom\GXMedias\Gurux.Serial\Development\Gurux.Serial_2010.csproj", "{D07A57D7-F2E7-4A0F-95D1-EF3B1FD688F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gurux.Serial_2008", "..\..\GXCom\GXMedias\Gurux.Serial\Development\Gurux.Serial_2008.csproj", "{D07A57D7-F2E7-4A0F-95D1-EF3B1FD688F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
